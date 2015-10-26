@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:wicket="http://wicket.apache.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="statisk/navet-standard.css"/>
+    <link rel="stylesheet" type="text/css" href="statisk/nav-sokeside.css"/>
+    <link rel="stylesheet" type="text/css" href="statisk/sokeside.css"/>
+    <script src="statisk/js/jquery-2.0.3.js" type="text/javascript"></script>
+    <script src="statisk/wicketkurs.js" type="text/javascript"></script>
+</head>
+<body class="font_normal">
+<div id="headerContainer">
+    <div class="noindex">
+        <a href="http://navet-q1.adeo.no/ansatt/Forsiden">
+            <img src="http://navet-q1.adeo.no/ansatt/_public/Navet/bilder/logo.gif?_ts=13b1b18b31d" class="logo"
+                 alt="Til forsiden">
+        </a>
+    </div>
+    <div id="headerContent">
+        <div class="switchFontContainer">
+            <div class="noindex">
+                <a onclick="javascript:changeFontSize(); return false;" href="#" class="NAVswitchFontLink"> //
+                    Skriftstørrelse</a>
+                <a onclick="javascript:setFontSize('normal'); return false;" href="#" class="NAVsizeLinks">
+                    <span class="small">A</span>
+                </a>
+                <a onclick="javascript:setFontSize('large'); return false;" href="#" class="NAVsizeLinks">
+                    <span class="medium">A</span>
+                </a>
+                <a onclick="javascript:setFontSize('largest'); return false;" href="#" class="NAVsizeLinks">
+                    <span class="large">A</span>
+                </a>
+            </div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<div id="borderLeft">
+    <div class="noindex">
+        <a href="http://navet-q1.adeo.no/ansatt/Forsiden">
+            <img src="http://navet-q1.adeo.no/ansatt/_public/Navet/bilder/hjem.gif?_ts=13b1b18ab4d" class="lnkHome" alt="Hjem">
+        </a>
+    </div>
+    <!--Start frameContainer--><div id="marginContainer">
+    <div id="frameContainer"><!--Start contentContainer--><div id="contentContainer"><!--Start semiHeader--><div class="avvikssider" id="semiHeader">
+        <div id="chooseCountyFille">&nbsp;</div>
+        <input type="hidden" value="false" name="isLocalPageForSearch">
+        <input type="hidden" value="" name="county">
+    </div>
+        <!--End semiHeader-->
+        <div class="appContentContainer clear">
+            <wicket:child/>
+        </div>
+        <div class="clear" id="footer">
+        </div>
+        <!--End contentContainer--></div>
+    </div>
+    <!--End frameContainer--></div>
+    <!--End borderLeft--><div id="borderBottomContainer">
+    <div id="borderBottomCenter"><div id="borderBottomLeft"></div></div>
+</div>
+</div>
+</body>
+</html>

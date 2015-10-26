@@ -1,0 +1,202 @@
+FORM LABEL {
+    display: block;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+FORM INPUT,
+FORM TEXTAREA {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    margin-left: 0;
+}
+
+ul {
+    list-style-type: none;
+    /*padding-left: 10px;*/
+    padding-right: 10px;
+}
+
+h3 {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0px;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.searchForm {
+    display: inline-block;
+    width: 60%;
+}
+
+.searchForm input {
+    padding: 0;
+    float:left;
+}
+
+.sokefelt {
+    font-size: 1.5em;
+    padding: 2px 1em 5px;
+    margin: 1px 4px 0 0;
+    width: 75%;
+    border: 1px solid #dadad7;
+    float: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.sokebar{
+    min-width: 510px;
+}
+
+.tab-row li {
+    float: left;
+    width: 33%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    background-color: lightgray;
+    border: 1px solid #dadad7;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+}
+
+.tab-row .selected {
+    background-color: darkgrey;
+    font-color: white;
+}
+
+.tab-row a {
+    text-decoration: none;
+    color: black;
+}
+
+.tab-row .selected a {
+    color: white;
+}
+
+.hitdescription {
+    margin-bottom: 50px;
+}
+
+.sokeresultatelement {
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
+    min-height: 70px;
+}
+
+li:hover .documenttitle {
+    color: #0067c5;
+    text-decoration: underline;
+}
+
+.hitpath {
+    color: darkgrey;
+    padding: 10px 0px;
+}
+
+.prioritertInnhold {
+    margin-bottom: 0px;
+    color: darkgrey;
+}
+
+.checkboxForm {
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+    width: 50%;
+}
+
+.checkboxForm form {
+    float: left;
+    display: inline-block;
+    width: 10px;
+}
+
+.checkboxForm p {
+    float: left;
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.navetToppTreff {
+    background: url(dashedhorizontal.gif) repeat-x bottom;
+    padding-bottom: 12px;
+}
+
+.filterBoks {
+    padding-bottom: 12px;
+}
+
+.filterPaTid {
+    height: 80px;
+}
+
+.sokeLabel {
+    float: left;
+    font-size: 1.5em;
+    margin-top: 8px;
+    width: 20%;
+    min-width: 230px;
+    color: #fff;
+}
+
+.sokeElement {
+    float: left;
+    width: 50%;
+    min-width: 500px;
+}
+
+.sokeForm .forst {
+    min-width: 401px;
+    margin-right: 1%;
+}
+
+.spesial-app {
+    border: solid 1px #eae9e8;
+    background: #c30000;
+    background: -moz-linear-gradient(top center, #c30000, #b90000);
+    background: -webkit-gradient(linear, center top, center bottom, from(#c30000), to(#b90000));
+    -moz-box-shadow:1px 1px 2px #dcdcdc;
+    -webkit-box-shadow:1px 1px 2px #dcdcdc;
+    box-shadow:1px 1px 2px #dcdcdc;
+}
+
+.kommentarSkjema .kommentarFelt {
+    width: 100%;
+}
+
+.feedbackPanel {
+    background-color: deeppink;
+}
+
+.visBlogginnleggKnapp {
+    color: white;
+    font-weight: bold;
+    border: 1px solid #ffc0cb;
+    text-shadow:0 -1px 1px #ffc0cb;
+    -moz-box-shadow:0 1px 0 #908B86 inset, 0 1px 2px #9E9E9E;
+    -webkit-box-shadow:0 1px 0 #908B86 inset, 0 1px 2px #9E9E9E;
+    box-shadow:0 1px 0 #908B86 inset, 0 1px 2px #9E9E9E;
+    background: #ffc0cb;
+
+}
+
