@@ -7,9 +7,9 @@ import org.apache.wicket.model.AbstractReadOnlyModel;
 import java.util.Date;
 
 
-public class DatingPanel extends Panel {
+public class DatoPanel extends Panel {
 
-    public DatingPanel(String id) {
+    public DatoPanel(String id) {
         super(id);
 
         add(

@@ -1,6 +1,9 @@
 package no.nav.wicketkurs.web;
 
-import static no.nav.sbl.jetty.Jetty.usingWebAppContextConfiguration;
+import java.io.File;
+
+import static no.nav.sbl.dialogarena.common.jetty.Jetty.usingWar;
+import static no.nav.sbl.dialogarena.test.path.FilesAndDirs.TEST_RESOURCES;
 
 /**
  * Starter lokal Jetty-server
@@ -13,8 +16,11 @@ public final class StartJetty {
     public static void main(String[] args) throws Exception {
 
         System.setProperty("wicket.configuration", "development");
-        usingWebAppContextConfiguration("jetty-web-context.xml").port(8080).at("/wicketkurs")
-                .buildJetty().start();
+        usingWar(new File(TEST_RESOURCES, "webapp"))
+                .at("/wicketkurs")
+                .port(8080)
+                .buildJetty()
+                .start();
 
     }
 }

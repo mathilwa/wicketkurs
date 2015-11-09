@@ -1,21 +1,24 @@
 package no.nav.wicketkurs.web;
 
-import no.nav.sbl.wicket.FluentWicketTester;
-import no.nav.sbl.wicket.events.AnnotationEventDispatcher;
-import no.nav.sbl.wicket.mock.MockPage;
+import no.nav.modig.wicket.test.FluentWicketTester;
 import org.apache.wicket.Page;
 import org.apache.wicket.ThreadContext;
+import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.settings.IMarkupSettings;
 import org.apache.wicket.settings.IResourceSettings;
+import org.apache.wicket.spring.test.ApplicationContextMock;
 import org.junit.After;
 
 /**
  * Baseklasse for wicket tester
  */
 public class WicketTestBase<WebApplication> {
+
+    protected ApplicationContextMock applicationContext;
     protected FluentWicketTester<WicketApplication> wicket;
 
     protected final FluentWicketTester<WicketApplication> wicket() {
+        applicationContext = new ApplicationContextMock();
         if (wicket == null) {
             wicket = new FluentWicketTester<WicketApplication>(createWebApplication());
         }
@@ -26,7 +29,7 @@ public class WicketTestBase<WebApplication> {
         return new WicketApplication() {
             @Override
             public Class<? extends Page> getHomePage() {
-                return MockPage.class;
+                return WebPage.class;
             }
 
             @Override
@@ -47,7 +50,7 @@ public class WicketTestBase<WebApplication> {
         settings.setStripWicketTags(true);
 
         initResources(application.getResourceSettings());
-        application.getFrameworkSettings().add(new AnnotationEventDispatcher());
+//        application.getFrameworkSettings().add(new AnnotationEventDispatcher());
 
         application.getResourceSettings().setUseDefaultOnMissingResource(true);
         application.getResourceSettings().setThrowExceptionOnMissingResource(false);

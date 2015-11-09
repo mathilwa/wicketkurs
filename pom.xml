@@ -8,7 +8,7 @@
     <artifactId>wicketkurs</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <wicket.version>6.8.0</wicket.version>
+        <wicket.version>6.19.0</wicket.version>
         <wicket.test.version>3.30</wicket.test.version>
         <wicket.commons.version>3.32</wicket.commons.version>
         <jetty.version>6.1.26</jetty.version>
@@ -16,6 +16,7 @@
         <slf4j.version>1.6.6</slf4j.version>
         <logback.version>1.0.9</logback.version>
         <junit.version>4.10</junit.version>
+        <modig.wicket.version>3.0.0</modig.wicket.version>
     </properties>
 
     <dependencies>
@@ -24,29 +25,48 @@
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-core</artifactId>
             <version>${wicket.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>no.nav.modig</groupId>
+            <artifactId>modig-wicket</artifactId>
+            <version>${modig.wicket.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>no.nav.modig</groupId>
+            <artifactId>modig-wicket-test</artifactId>
+            <version>1.0.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- NAV SBL COMMON DEPENDENCIES -->
         <dependency>
-            <groupId>no.nav.sbl.felles</groupId>
-            <artifactId>nav-sbl-felles-commons-jetty</artifactId>
-            <version>${nav.sbl.commons.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>no.nav.sbl.felles</groupId>
-            <artifactId>nav-sbl-felles-commons-wicket6-test</artifactId>
-            <version>${wicket.test.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>no.nav.sbl.felles</groupId>
-            <artifactId>nav-sbl-felles-commons-wicket6</artifactId>
-            <version>${wicket.commons.version}</version>
+            <groupId>no.nav.sbl.dialogarena</groupId>
+            <artifactId>common-jetty</artifactId>
+            <version>1.0.23</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- JETTY DEPENDENCIES -->
+        <dependency>
+            <groupId>no.nav.sbl.dialogarena</groupId>
+            <artifactId>common-test</artifactId>
+            <version>1.2</version>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jetty</artifactId>
