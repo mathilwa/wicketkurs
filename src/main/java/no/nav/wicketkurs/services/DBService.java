@@ -10,4 +10,6 @@ import java.util.List;
 public interface DBService {
 
     List<Kommentar> getKommentarer();
+
+    void leggTilKommentar(Kommentar kommentar);
 }

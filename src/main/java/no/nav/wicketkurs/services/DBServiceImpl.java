@@ -13,7 +13,7 @@ public class DBServiceImpl implements DBService, Serializable {
     private List<Kommentar> kommentarliste;
 
     public DBServiceImpl() {
-        kommentarliste = new ArrayList<Kommentar>();
+        kommentarliste = new ArrayList<>();
         opprettMockKommentarer();
     }
 
@@ -26,6 +26,11 @@ public class DBServiceImpl implements DBService, Serializable {
     @Override
     public List<Kommentar> getKommentarer() {
         return kommentarliste;
+    }
+
+    @Override
+    public void leggTilKommentar(Kommentar kommentar) {
+        kommentarliste.add(kommentar);
     }
 
     public static DBServiceImpl getInstance(){

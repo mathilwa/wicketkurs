@@ -11,8 +11,4 @@ public class ForsideTest extends WicketTestBase {
         wicket().goTo(Forside.class);
     }
 
-    @Test
-    public void testForside(){
-        wicket.tester.assertRenderedPage(Forside.class);
-    }
 }
