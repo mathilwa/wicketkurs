@@ -1,13 +1,18 @@
 <html xmlns:wicket="http://wicket.apache.org" xmlns="http://www.w3.org/1999/xhtml">
 <wicket:panel>
     <form wicket:id="kommentarForm">
+        <div wicket:id="feedbackPanel"/>
+
         <label for="navn" wicket:id="navnLabel"></label>
         <input id="navn" wicket:id="navn">
+
         <label for="epost" wicket:id="epostLabel"></label>
         <input id="epost" wicket:id="epost">
+
         <label for="kommentar" wicket:id="kommentarLabel"></label>
         <input id="kommentar" wicket:id="kommentartekst">
-        <input type="submit">
+
+        <input type="submit" value="Send inn">
     </form>
 </wicket:panel>
 </html>

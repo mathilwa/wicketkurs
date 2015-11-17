@@ -12,6 +12,7 @@ public class KommentarListePanel extends Panel {
 
     public KommentarListePanel(String id, List<Kommentar> kommentarliste) {
         super(id);
+        setOutputMarkupPlaceholderTag(true);
 
         add(
                 new ListView<Kommentar>("kommentarliste", kommentarliste) {

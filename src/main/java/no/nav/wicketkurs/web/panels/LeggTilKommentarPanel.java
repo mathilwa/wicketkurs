@@ -6,26 +6,30 @@ import no.nav.wicketkurs.services.DBServiceImpl;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.Model;
 
 
 public class LeggTilKommentarPanel extends Panel {
 
+    public static final String VELLYKKET_INNSENDING = "Du har sendt inn melding";
     private DBService dbService = DBServiceImpl.getInstance();
 
     public LeggTilKommentarPanel(String id) {
         super(id);
 
+        FeedbackPanel feedbackPanel = new FeedbackPanel("feedbackPanel");
         Form kommentarForm = new Form("kommentarForm", new CompoundPropertyModel(new Kommentar())) {
             @Override
             protected void onSubmit() {
                 dbService.leggTilKommentar((Kommentar) getModelObject());
                 setModelObject(new Kommentar());
+                info(VELLYKKET_INNSENDING);
             }
         };
 
+        kommentarForm.add(feedbackPanel);
         kommentarForm.add(new Label("navnLabel", "Navn"));
         kommentarForm.add(new Label("kommentarLabel", "Kommentar"));
         kommentarForm.add(new Label("epostLabel", "Epost"));

@@ -3,6 +3,7 @@ package no.nav.wicketkurs.web.panels;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.AbstractReadOnlyModel;
+import org.apache.wicket.model.Model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,10 +15,10 @@ public class DatoPanel extends Panel {
         super(id);
 
         add(
-                new Label("dato", new AbstractReadOnlyModel<String>() {
+                new Label("dato", new Model<String>() {
                     @Override
                     public String getObject() {
-                        SimpleDateFormat datovisning = new SimpleDateFormat("dd.MM.yy hh:mm");
+                        SimpleDateFormat datovisning = new SimpleDateFormat("dd.MM.yy hh:mm:ss");
                         return datovisning.format(new Date());
                     }
                 } )

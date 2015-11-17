@@ -20,7 +20,12 @@
         </section>
 
         <section class="kolonne sist">
-            <div class="panel" wicket:id="blogg"></div>
+            <div class="panel">
+                <h2 wicket:id="blogg"></h2>
+                <button class="visBlogginnleggKnapp" wicket:id="visInnleggKnapp">
+                    <span wicket:id="knappTekst"></span>
+                </button>
+            </div>
             <div class="panel" wicket:id="kommentarPanel"></div>
             <div class="panel" wicket:id="datoPanel"><!-- Datopanel --></div>
         </section>
