@@ -7,6 +7,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.Model;
 
 
@@ -17,24 +18,20 @@ public class LeggTilKommentarPanel extends Panel {
     public LeggTilKommentarPanel(String id) {
         super(id);
 
-        final TextField navnFelt = new TextField("navn", new Model());
-        final TextField kommentartekstFelt = new TextField("kommentar", new Model());
-        final TextField mailFelt = new TextField("mail", new Model());
-
-        Form kommentarForm = new Form("kommentarForm") {
+        Form kommentarForm = new Form("kommentarForm", new CompoundPropertyModel(new Kommentar())) {
             @Override
             protected void onSubmit() {
-                System.out.println("Lagt til");
-                dbService.leggTilKommentar(new Kommentar(navnFelt.getModelObject().toString(), mailFelt.getModelObject().toString(), kommentartekstFelt.getModelObject().toString()));
+                dbService.leggTilKommentar((Kommentar) getModelObject());
+                setModelObject(new Kommentar());
             }
         };
 
         kommentarForm.add(new Label("navnLabel", "Navn"));
         kommentarForm.add(new Label("kommentarLabel", "Kommentar"));
-        kommentarForm.add(new Label("mailLabel", "Mail"));
-        kommentarForm.add(navnFelt);
-        kommentarForm.add(kommentartekstFelt);
-        kommentarForm.add(mailFelt);
+        kommentarForm.add(new Label("epostLabel", "Epost"));
+        kommentarForm.add(new TextField("navn"));
+        kommentarForm.add(new TextField("epost"));
+        kommentarForm.add(new TextField("kommentartekst"));
 
         add(kommentarForm);
     }
