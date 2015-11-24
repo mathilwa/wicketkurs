@@ -4,15 +4,15 @@ import no.nav.wicketkurs.web.WicketTestBase;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ForsideTest extends WicketTestBase {
+public class ForsidePageTest extends WicketTestBase {
 
     @Before
     public void setup() {
-        wicket().goTo(Forside.class);
+        wicket().goTo(ForsidePage.class);
     }
 
     @Test
     public void testForside(){
-        wicket.tester.assertRenderedPage(Forside.class);
+        wicket.tester.assertRenderedPage(ForsidePage.class);
     }
 }
