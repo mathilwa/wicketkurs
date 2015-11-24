@@ -5,6 +5,7 @@ import no.nav.wicketkurs.services.DBService;
 import no.nav.wicketkurs.services.DBServiceImpl;
 import no.nav.wicketkurs.web.containers.VisInnleggKnapp;
 import no.nav.wicketkurs.web.panels.DatoPanel;
+import no.nav.wicketkurs.web.panels.GratulasjonstekstPanel;
 import no.nav.wicketkurs.web.panels.KommentarListePanel;
 import no.nav.wicketkurs.web.panels.LeggTilKommentarPanel;
 import org.apache.wicket.ajax.AjaxRequestTarget;
@@ -35,6 +36,7 @@ public class Forside extends BasePage {
                 new DatoPanel("datoPanel"),
                 new LeggTilKommentarPanel("leggTilKommentarPanel"),
                 new VisInnleggKnapp("visInnleggKnapp", kommentarListePanel),
+                new GratulasjonstekstPanel("gratulasjonstekstPanel", kommentarliste),
                 kommentarListePanel
         );
     }
