@@ -1,6 +1,6 @@
 package no.nav.wicketkurs.web;
 
-import no.nav.wicketkurs.web.pages.Forside;
+import no.nav.wicketkurs.web.pages.ForsidePage;
 import org.apache.wicket.Page;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.settings.IMarkupSettings;
@@ -19,13 +19,13 @@ public class WicketApplication extends WebApplication {
         settings.setStripComments(true);
         settings.setCompressWhitespace(true);
 
-        mountPage("forside", Forside.class);
+        mountPage("forside", ForsidePage.class);
 
     }
 
     @Override
     public Class<? extends Page> getHomePage() {
-        return Forside.class;
+        return ForsidePage.class;
     }
 
 }

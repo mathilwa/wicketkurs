@@ -9,9 +9,6 @@ import java.util.List;
 
 import static no.nav.modig.wicket.conditional.ConditionalUtils.visibleIf;
 
-/**
- * Created by w132123 on 24.11.2015.
- */
 public class GratulasjonstekstPanel extends Panel {
 
     public GratulasjonstekstPanel(String id, final List<Kommentar> kommentarliste) {

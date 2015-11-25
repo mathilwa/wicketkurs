@@ -20,11 +20,12 @@ public class LeggTilKommentarPanel extends Panel {
         super(id);
 
         FeedbackPanel feedbackPanel = new FeedbackPanel("feedbackPanel");
-        Form kommentarForm = new Form("kommentarForm", new CompoundPropertyModel(new Kommentar())) {
+        Form kommentarForm = new Form<Kommentar>("kommentarForm", new CompoundPropertyModel<Kommentar>(new Kommentar())) {
             @Override
             protected void onSubmit() {
-                dbService.leggTilKommentar((Kommentar) getModelObject());
+                dbService.leggTilKommentar(getModelObject());
                 setModelObject(new Kommentar());
+
                 info(VELLYKKET_INNSENDING);
             }
         };

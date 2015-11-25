@@ -12,11 +12,11 @@ import org.junit.Test;
 
 import static no.nav.modig.wicket.test.matcher.ComponentMatchers.ofType;
 
-public class ForsideTest extends WicketTestBase {
+public class ForsidePageTest extends WicketTestBase {
 
     @Before
     public void setup() {
-        wicket().goTo(Forside.class);
+        wicket().goTo(ForsidePage.class);
     }
 
     @Test

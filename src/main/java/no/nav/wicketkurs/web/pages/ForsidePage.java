@@ -18,11 +18,11 @@ import java.util.List;
 /**
  * Startside
  */
-public class Forside extends BasePage {
+public class ForsidePage extends BasePage {
 
     private DBService dbService;
 
-    public Forside() {
+    public ForsidePage() {
         dbService = DBServiceImpl.getInstance();
         setStatelessHint(false);
 

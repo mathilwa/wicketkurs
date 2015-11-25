@@ -10,11 +10,8 @@
     </appender>
 
 
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="consoleAppender"/>
     </root>
-
-    <logger name="no.nav" level="DEBUG" />
-    <logger name="org.apache.wicket" level="WARN" />
 
 </configuration>
